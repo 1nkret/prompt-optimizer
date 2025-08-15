@@ -1,0 +1,15 @@
+services:
+  api:
+    build: ./apps/backend
+    env_file: [.env]
+    ports: ["8000:8000"]
+
+  web:
+    build: ./apps/front
+    env_file: [.env.local]
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_API_BASE=http://api:8000
+      - API_BASE=http://api:8000
+    depends_on: [api]
+    ports: ["3000:3000"]
