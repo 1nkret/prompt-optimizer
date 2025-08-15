@@ -16,6 +16,21 @@ A Next.js application for optimizing prompts using Google's Gemini AI.
 
 ## Getting Started
 
+### Configure
+- you need to configure .env and .env.local files
+
+## .env
+```env
+GOOGLE_API_KEY="YOUR_API"
+CORS_ORIGINS=http://localhost:3000
+PORT=8000
+```
+
+## .env.local
+```env
+NEXT_PUBLIC_API_BASE=http://localhost:8000
+```
+
 ### Prerequisites
 - [Docker](https://www.docker.com/) installed on your system.
 
